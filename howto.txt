@@ -1,0 +1,10 @@
+How to:
+
+run "make" to get the executable for openMP code.
+execute "make run" to run it.
+
+Mapping of tasks:
+
+In openMP, the mapping is done to threads such that each subproblem is assigned to a different thread. The thread decides if to branch further, update best Solution or to prevent further exploration. 
+
+In MPI, the master after adding the initial subproblem, waits for result from the wokrer slave. According to the recived tag, more branches are created, or best solution is updated. The master keeps allocating more workers to the available subproblems.
